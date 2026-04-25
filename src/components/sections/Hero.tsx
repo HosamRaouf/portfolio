@@ -21,7 +21,7 @@ export function Hero() {
       <div className="absolute -inset-16 bg-neon-cyan/20 rounded-full blur-[100px] group-hover:bg-neon-cyan/30 transition-colors duration-700 animate-pulse" />
       <div className="absolute -inset-8 bg-neon-purple/10 rounded-full blur-[60px]" />
       
-      <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 rounded-full border-2 border-neon-cyan/40 p-3 bg-glass-dark backdrop-blur-xl shadow-[0_0_80px_rgba(0,240,255,0.15)] overflow-hidden">
+      <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 rounded-full border-2 border-neon-cyan/40 bg-glass-dark backdrop-blur-xl shadow-[0_0_80px_rgba(0,240,255,0.15)] overflow-hidden">
         <SafeImage 
           src={getAssetPath("/assets/1714351292466.jpg")} 
           alt="Hosam" 
@@ -29,7 +29,7 @@ export function Hero() {
           priority
           containerClassName="w-full h-full"
           sizes="(max-width: 768px) 192px, 288px"
-          className="object-cover rounded-full scale-110 grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+          className="object-cover scale-110 grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
         />
       </div>
       
