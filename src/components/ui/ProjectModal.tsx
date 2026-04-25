@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, MonitorSmartphone } from "lucide-react";
 import Image from "next/image";
 import { NeonButton } from "./NeonButton";
+import { SafeImage } from "./SafeImage";
 
 const GithubIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.5a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 5 3 6.2 6 6.5a4.8 4.8 0 0 0-1 3.2v4"></path></svg>
@@ -38,7 +39,7 @@ export function ProjectModal({ project, isOpen, onClose, onImageClick }: Project
           <div className="relative w-full h-40 md:h-56 flex-shrink-0 bg-[#05070D] flex items-center justify-center p-8 border-b border-glass-border">
             {project.logo ? (
               <div className="relative w-32 h-32 opacity-90 drop-shadow-[0_0_25px_rgba(0,240,255,0.4)]">
-                <Image src={project.logo} alt={`${project.title} logo`} fill className="object-contain" priority />
+                <SafeImage src={project.logo} alt={`${project.title} logo`} fill containerClassName="w-full h-full" className="object-contain" priority />
               </div>
             ) : (
                <div className="w-full h-full bg-gradient-to-br from-primary to-neon-pink/20" />
@@ -97,7 +98,7 @@ export function ProjectModal({ project, isOpen, onClose, onImageClick }: Project
                         className="relative w-[140px] h-[250px] flex-shrink-0 rounded-xl overflow-hidden border border-white/10 hover:border-neon-cyan/50 hover:shadow-[0_0_20px_rgba(0,240,255,0.2)] transition-all cursor-zoom-in snap-center"
                         onClick={() => onImageClick?.(img)}
                       >
-                        <Image src={img} alt={`Gallery ${idx}`} fill className="object-cover" />
+                        <SafeImage src={img} alt={`Gallery ${idx}`} fill containerClassName="w-full h-full" className="object-cover" />
                       </div>
                     ))}
                   </div>

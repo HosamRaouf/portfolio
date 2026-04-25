@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import Image from "next/image";
+import { SafeImage } from "./SafeImage";
 
 interface ImageViewerProps {
   src: string;
@@ -39,10 +40,11 @@ export function ImageViewer({ src, alt, isOpen, onClose }: ImageViewerProps) {
           className="relative w-full max-w-5xl h-full flex items-center justify-center pointer-events-none"
         >
           <div className="relative w-full h-[85vh] rounded-xl overflow-hidden shadow-[0_0_50px_rgba(0,240,255,0.1)] pointer-events-auto">
-            <Image 
+            <SafeImage 
               src={src} 
               alt={alt} 
               fill 
+              containerClassName="w-full h-full"
               className="object-contain"
               priority
             />

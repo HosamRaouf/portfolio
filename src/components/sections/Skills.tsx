@@ -123,9 +123,9 @@ export function Skills() {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
-        <div className="mb-16 flex items-center gap-4">
+        <div className="mb-16 flex items-center gap-3 sm:gap-4">
           <div className="h-[1px] flex-grow bg-gradient-to-r from-transparent to-glass-border" />
-          <h2 className="text-3xl md:text-5xl font-heading font-bold text-white text-center">
+          <h2 className="text-xl sm:text-2xl md:text-5xl font-heading font-bold text-white text-center whitespace-nowrap">
             SYSTEM_<span className="text-neon-cyan glow-text-cyan">SKILLS</span>
           </h2>
           <div className="h-[1px] flex-grow bg-gradient-to-l from-transparent to-glass-border" />

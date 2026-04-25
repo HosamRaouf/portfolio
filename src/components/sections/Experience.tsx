@@ -61,7 +61,7 @@ export function Experience() {
           <div className="p-3 bg-neon-purple/10 rounded-xl border border-neon-purple/20">
             <Briefcase className="text-neon-purple" size={24} />
           </div>
-          <h2 className="text-4xl font-heading font-bold">SYSTEM.EXPERIENCE</h2>
+          <h2 className="text-2xl sm:text-4xl font-heading font-bold whitespace-nowrap">SYSTEM.EXPERIENCE</h2>
           <div className="flex-1 h-px bg-gradient-to-r from-neon-purple/50 to-transparent ml-4" />
         </div>
 

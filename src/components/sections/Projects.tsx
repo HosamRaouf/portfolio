@@ -8,6 +8,7 @@ import Image from "next/image";
 import { ProjectModal } from "../ui/ProjectModal";
 import { ImageViewer } from "../ui/ImageViewer";
 import { getAssetPath } from "@/utils/paths";
+import { SafeImage } from "../ui/SafeImage";
 
 export const projectsData = [
   {
@@ -195,11 +196,11 @@ export function Projects() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mb-16 md:mb-24 flex items-center gap-4"
+          className="mb-16 md:mb-24 flex items-center gap-3 sm:gap-4"
         >
           <div className="h-[1px] flex-grow bg-gradient-to-r from-transparent to-glass-border"></div>
-          <h2 className="text-3xl md:text-5xl font-heading font-bold text-white text-center">
-            CORE_SYSTEM_<span className="text-neon-cyan glow-text-cyan">PROJECTS</span>
+          <h2 className="text-xl sm:text-2xl md:text-5xl font-heading font-bold text-white text-center whitespace-nowrap">
+            CORE_<span className="hidden sm:inline">SYSTEM_</span><span className="text-neon-cyan glow-text-cyan">PROJECTS</span>
           </h2>
           <div className="h-[1px] flex-grow bg-gradient-to-l from-transparent to-glass-border"></div>
         </motion.div>
@@ -218,10 +219,11 @@ export function Projects() {
                 {/* Hero Logo Banner — full bleed */}
                 <div onClick={() => setSelectedProject(project)} className="cursor-pointer relative w-full h-[200px] bg-[#05070D] overflow-hidden">
                   {project.logo ? (
-                    <Image
+                    <SafeImage
                       src={project.logo}
                       alt={`${project.title} logo`}
                       fill
+                      containerClassName="w-full h-full"
                       className="object-contain p-8 transition-transform duration-500 group-hover:scale-110 drop-shadow-[0_0_20px_rgba(0,240,255,0.4)]"
                     />
                   ) : (
@@ -264,7 +266,13 @@ export function Projects() {
                           className="relative w-[100px] h-[178px] flex-shrink-0 rounded-lg overflow-hidden border border-white/10 hover:border-neon-pink/70 transition-all cursor-zoom-in group/img"
                           onClick={(e) => { e.stopPropagation(); setViewerImage(imgUrl); }}
                         >
-                          <Image src={imgUrl} alt={`Screenshot ${i}`} fill className="object-cover group-hover/img:scale-105 transition-transform duration-300" />
+                          <SafeImage 
+                            src={imgUrl} 
+                            alt={`Screenshot ${i}`} 
+                            fill 
+                            containerClassName="w-full h-full"
+                            className="object-cover group-hover/img:scale-105 transition-transform duration-300" 
+                          />
                         </div>
                       ))}
                     </motion.div>

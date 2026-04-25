@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { NeonButton } from "../ui/NeonButton";
 import { Code, Cpu, Download } from "lucide-react";
 import { CodeParticles } from "../ui/CodeParticles";
-import Image from "next/image";
-import { projectsData } from "./Projects";
 import { getAssetPath } from "@/utils/paths";
+import { projectsData } from "./Projects";
+import { SafeImage } from "../ui/SafeImage";
 
 export function Hero() {
   const HeroImage = (
@@ -22,11 +22,12 @@ export function Hero() {
       <div className="absolute -inset-8 bg-neon-purple/10 rounded-full blur-[60px]" />
       
       <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 rounded-full border-2 border-neon-cyan/40 p-3 bg-glass-dark backdrop-blur-xl shadow-[0_0_80px_rgba(0,240,255,0.15)] overflow-hidden">
-        <Image 
+        <SafeImage 
           src={getAssetPath("/assets/1714351292466.jpg")} 
           alt="Hosam" 
           fill 
           priority
+          containerClassName="w-full h-full"
           sizes="(max-width: 768px) 192px, 288px"
           className="object-cover rounded-full scale-110 grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
         />
@@ -57,7 +58,7 @@ export function Hero() {
         >
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}
-            className="flex items-center gap-3 text-neon-cyan font-mono text-sm mb-8"
+            className="flex items-center gap-3 text-neon-cyan font-mono text-[10px] sm:text-sm mb-8"
           >
             <Cpu size={16} />
             <span>SYSTEM.ONLINE</span>

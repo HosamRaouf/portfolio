@@ -17,7 +17,7 @@ export function About() {
           <div className="p-3 bg-neon-cyan/10 rounded-xl border border-neon-cyan/20">
             <User className="text-neon-cyan" size={24} />
           </div>
-          <h2 className="text-4xl font-heading font-bold">SYSTEM.ABOUT</h2>
+          <h2 className="text-2xl sm:text-4xl font-heading font-bold whitespace-nowrap">SYSTEM.ABOUT</h2>
           <div className="flex-1 h-px bg-gradient-to-r from-neon-cyan/50 to-transparent ml-4" />
         </div>
 

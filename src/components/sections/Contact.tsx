@@ -61,7 +61,7 @@ export function Contact() {
           </div>
 
           <div className="p-8 md:p-12 font-mono">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 text-white text-center">
+            <h2 className="text-2xl md:text-5xl font-heading font-bold mb-6 text-white text-center">
               INITIATE <span className="text-neon-cyan glow-text-cyan">HANDSHAKE</span>
             </h2>
             <p className="text-text-secondary text-center mb-10 max-w-lg mx-auto">
