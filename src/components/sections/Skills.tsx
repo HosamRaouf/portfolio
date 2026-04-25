@@ -6,7 +6,7 @@ import { GlassCard } from "../ui/GlassCard";
 import type { ReactElement } from "react";
 
 // Official SVG icons for each skill
-const skillIcons = {
+const skillIcons: Record<string, React.ReactNode> = {
   // State Management
   "BloC": <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 flex-shrink-0"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 2a8 8 0 1 1 0 16A8 8 0 0 1 12 4zm-1 4v4H7l5 6 5-6h-4V8h-2z"/></svg>,
   "Cubit": <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 flex-shrink-0"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 2a8 8 0 1 1 0 16A8 8 0 0 1 12 4zm-1 4v4H7l5 6 5-6h-4V8h-2z"/></svg>,
