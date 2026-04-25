@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #05070D;
+  --color-secondary: #0A0F1C;
+  
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-glass-strong: rgba(255, 255, 255, 0.08);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+  
+  --color-neon-cyan: #00F0FF;
+  --color-neon-pink: #FF2E88;
+  --color-neon-purple: #7A5FFF;
+  
+  --color-text-main: #E6F1FF;
+  --color-text-secondary: #9FB3C8;
+  --color-text-muted: #5F7287;
+  
+  --font-sans: var(--font-inter), sans-serif;
+  --font-heading: var(--font-orbitron), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-primary text-text-main antialiased selection:bg-neon-cyan/30;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply backdrop-blur-[20px] bg-glass border border-glass-border shadow-[0_0_20px_rgba(0,240,255,0.08)] rounded-[24px];
+  }
+  
+  .neon-btn-cyan {
+    @apply flex items-center justify-center h-[48px] px-[24px] rounded-[16px] bg-transparent border border-neon-cyan text-neon-cyan font-medium transition-all duration-300;
+  }
+  .neon-btn-cyan:hover {
+    @apply shadow-[0_0_10px_rgba(0,240,255,0.6),0_0_20px_rgba(0,240,255,0.4)] scale-[1.03] text-white;
+  }
+  .neon-btn-cyan:active {
+    @apply scale-[0.98];
+  }
+
+  .neon-btn-pink {
+    @apply flex items-center justify-center h-[48px] px-[24px] rounded-[16px] bg-transparent border border-neon-pink text-neon-pink font-medium transition-all duration-300;
+  }
+  .neon-btn-pink:hover {
+    @apply shadow-[0_0_10px_rgba(255,46,136,0.6),0_0_20px_rgba(255,46,136,0.4)] scale-[1.03] text-white;
+  }
+  .neon-btn-pink:active {
+    @apply scale-[0.98];
+  }
+  
+  .glow-text-cyan {
+    text-shadow: 0 0 10px rgba(0,240,255,0.6), 0 0 20px rgba(0,240,255,0.4);
+  }
+  .glow-text-pink {
+    text-shadow: 0 0 10px rgba(255,46,136,0.6), 0 0 20px rgba(255,46,136,0.4);
+  }
+}
