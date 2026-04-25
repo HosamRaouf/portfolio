@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ProjectModal } from "../ui/ProjectModal";
 import { ImageViewer } from "../ui/ImageViewer";
+import { getAssetPath } from "@/utils/paths";
 
 export const projectsData = [
   {
@@ -170,15 +171,22 @@ export function Projects() {
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
   const [viewerImage, setViewerImage] = useState<string | null>(null);
 
+  // Apply asset path prefix to all projects for GitHub Pages compatibility
+  const projects = projectsData.map(p => ({
+    ...p,
+    logo: getAssetPath(p.logo),
+    images: p.images.map(img => getAssetPath(img))
+  }));
+
   // Listen for open-project events (from Hero)
   useEffect(() => {
     const handleOpen = (e: any) => {
-      const project = projectsData.find(p => p.id === e.detail);
+      const project = projects.find(p => p.id === e.detail);
       if (project) setSelectedProject(project);
     };
     window.addEventListener('open-project', handleOpen);
     return () => window.removeEventListener('open-project', handleOpen);
-  }, []);
+  }, [projects]);
 
   return (
     <>
@@ -197,7 +205,7 @@ export function Projects() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-          {projectsData.map((project, idx) => (
+          {projects.map((project, idx) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 50 }}

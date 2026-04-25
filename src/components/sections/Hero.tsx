@@ -6,6 +6,7 @@ import { Code, Cpu, Download } from "lucide-react";
 import { CodeParticles } from "../ui/CodeParticles";
 import Image from "next/image";
 import { projectsData } from "./Projects";
+import { getAssetPath } from "@/utils/paths";
 
 export function Hero() {
   const HeroImage = (
@@ -22,7 +23,7 @@ export function Hero() {
       
       <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 rounded-full border-2 border-neon-cyan/40 p-3 bg-glass-dark backdrop-blur-xl shadow-[0_0_80px_rgba(0,240,255,0.15)] overflow-hidden">
         <Image 
-          src="/assets/1714351292466.jpg" 
+          src={getAssetPath("/assets/1714351292466.jpg")} 
           alt="Hosam" 
           fill 
           priority
@@ -89,7 +90,7 @@ export function Hero() {
             <NeonButton variant="pink" className="w-full sm:w-auto" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
               Contact Me
             </NeonButton>
-            <a href="/assets/cv.pdf" download className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl border border-white/20 text-text-secondary font-mono text-sm font-bold hover:bg-white/5 hover:text-white transition-all duration-300">
+            <a href={getAssetPath("/assets/cv.pdf")} download className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl border border-white/20 text-text-secondary font-mono text-sm font-bold hover:bg-white/5 hover:text-white transition-all duration-300">
               <Download size={16} /> Download CV
             </a>
           </div>
