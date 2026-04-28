@@ -55,7 +55,7 @@ export function Contact() {
               <div className="w-3 h-3 rounded-full bg-green-500/80" />
             </div>
             <div className="flex-1 text-center font-mono text-xs text-text-muted">
-              connect@hosam.exe ~ /bin/bash
+              connect@hosam.dart ~ /bin/bash
             </div>
             <Terminal size={14} className="text-text-muted" />
           </div>
