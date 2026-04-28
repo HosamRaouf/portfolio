@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const experiences = [
   {
     id: "gentech",
-    role: "Senior Flutter Developer",
+    role: "Flutter Developer",
     company: "Gentech",
     date: "2026–Present",
     color: "neon-cyan",
@@ -22,7 +22,7 @@ const experiences = [
   },
   {
     id: "freelancing",
-    role: "Senior Flutter Developer",
+    role: "Flutter Developer",
     company: "Freelancing",
     date: "2023–2025",
     color: "neon-purple",

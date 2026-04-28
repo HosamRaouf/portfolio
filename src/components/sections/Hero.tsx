@@ -77,7 +77,7 @@ export function Hero() {
           </h1>
 
           <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-text-secondary mb-6">
-            Senior <span className="text-white font-bold">Flutter</span> Developer
+            <span className="text-white font-bold">Flutter</span> Developer
           </h2>
 
           <p className="text-text-muted text-sm md:text-base max-w-lg mb-10 leading-relaxed px-4 lg:px-0">

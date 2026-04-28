@@ -18,10 +18,10 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hosam.exe | Senior Flutter Developer",
-  description: "Senior Flutter Developer with 5+ years of expertise in architecting high-performance, visually-driven cross-platform applications.",
+  title: "Hosam.exe | Flutter Developer",
+  description: "Flutter Developer with 5+ years of expertise in architecting high-performance, visually-driven cross-platform applications.",
   openGraph: {
-    title: "Hosam.exe | Senior Flutter Developer",
+    title: "Hosam.exe | Flutter Developer",
     description: "Architecting high-performance, visually-driven cross-platform applications with Clean Architecture and Impeller Engine.",
     type: "website",
   },

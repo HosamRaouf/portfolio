@@ -30,7 +30,7 @@ export function About() {
           </div>
 
           <p className="text-lg md:text-xl text-text-main leading-relaxed font-body">
-            Senior <span className="text-white font-bold glow-text-cyan">Flutter Developer</span> with 5+ years of expertise in architecting high-performance, visually-driven cross-platform applications. 
+            <span className="text-white font-bold glow-text-cyan">Flutter Developer</span> with 5+ years of expertise in architecting high-performance, visually-driven cross-platform applications. 
             Specialist in <span className="text-neon-cyan">Clean Architecture</span>, <span className="text-neon-purple">Impeller Engine optimization</span>, and <span className="text-neon-pink">AI-integrated UIs</span> featuring custom <span className="text-white border-b border-neon-pink">Rive animations</span>. 
             <br/><br/>
             Expert in the full mobile release lifecycle, including advanced management of App Store Connect and Google Play Console for global deployments, compliance, and automated metadata optimization. 
